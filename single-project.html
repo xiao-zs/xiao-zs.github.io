@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Box personal portfolio Template</title>
+    <link rel="icon" href="img/fav.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="container-fluid">
+       <!-- box-header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.html"><img src="img/logo.png" width="80" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box-header -->
+        
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label">关于我</li>
+
+                <li><a href="index.html">介绍</a>  <!--<i class="ion-ios-circle-filled color"></i>--></li>
+                <li><a href="about.html">我</a></li>
+                <li><a href="javascript:alert('暂无.');">展示</a></li>
+
+                <li class="box-label">(๑•̀ㅂ•́)و✧</li>
+
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+    
+    <!-- top-bar -->
+	<!-- 
+    <div class="top-bar">
+        <h1>project title</h1>
+        <p><a href="#">Home</a> / <a href="#">portfolio</a> / project title</p>
+    </div>
+	-->
+    <!-- end top-bar -->
+    
+    <!-- main-container -->
+    <div class="container main-container">
+        <div class="col-md-12">
+            <img src="#" οnerrοr="imgUrl()" id="imgInit" alt="" class="img-responsive" />
+            <div class="h-30"></div>
+        </div>
+    </div>
+    <!-- end main-container -->
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">© Box Portfolio 2016 </p>
+        </div>
+    </footer>
+    <!-- end footer -->
+    
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+	<script>
+
+		function GetRequest() {
+		  var url = location.search; //获取url中"?"符后的字串
+		  if (url.indexOf("?") != -1) {  //判断是否有参数
+		   var str = url.substr(1); //从第一个字符开始 因为第0个是?号 获取所有除问号的所有符串
+		   strs = str.split("=");  //用等号进行分隔 （因为知道只有一个参数 所以直接用等号进分隔 如果有多个参数 要用&号分隔 再用等号进行分隔）
+		   //alert(strs[0]);     //直接弹出第一个参数 （如果有多个参数 还要进行循环的）
+		   return strs[0];
+		  }
+		}
+
+		window.onload = function (){
+		document.getElementById('imgInit').src = "https://s1.ax1x.com/2020/11/02/"+GetRequest()+".jpg";
+		}
+
+	</script>
+    
+
+</body>
+
+</html>
